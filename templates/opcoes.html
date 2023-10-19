@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favi.ico') }}" type="image/x-icon">
+    <title>Formulário com Menu Múltiplo</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 34px; /* Altere o tamanho conforme necessário */
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        label {
+            color: #61dafb;
+        }
+
+        input,
+        .btn {
+            background-color: #61dafb;
+            color: #fff;
+        }
+
+        input::placeholder {
+            color: #ccc;
+        }
+
+        .form-check-label {
+            color: #61dafb;
+        }
+
+        .dropdown-toggle {
+            background-color: #61dafb;
+            color: #fff;
+        }
+
+        .dropdown-item {
+            background-color: #121212;
+            color: #fff;
+        }
+
+        .dropdown-item:hover {
+            background-color: #333;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilo personalizado para alinhar opções verticalmente e adicionar espaçamento */
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 8px; /* Adicione o espaçamento desejado */
+        }
+
+        .options-group {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px; /* Adicione o espaçamento desejado */
+        }
+
+        /* Adicionando espaço entre a checkbox e o texto da label */
+        .form-check-label {
+            margin-left: 10px;
+        }
+
+        /* Adicionando espaço abaixo do botão */
+        .mb-3.text-center {
+            margin-top: 20px; /* Ajuste o valor conforme necessário */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar aqui se desejar -->
+    </header>
+
+    <main>
+        <!-- Adicione o atributo 'action' ao seu formulário para indicar a rota a ser chamada -->
+        <form method="POST" action="{{ url_for('opcoes') }}">
+            <!-- Seus campos de nome e idade aqui -->
+            <div class="container d-flex justify-content-center align-items-center">
+                <h1>Selecione as opcoes:</h1>
+            </div>
+            <div class="container d-flex justify-content-center align-items-center">
+                <h2>Cafe da manhã:</h2>
+            </div>
+            <div class="options-container">
+                <!-- Adicione o atributo 'name' aos seus checkboxes para capturar as opções -->
+                <div class="options-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="opcoes" value="Arroz">
+                        <label class="form-check-label" for="inlineCheckbox1">Arroz</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="opcoes" value="Feijão">
+                        <label class="form-check-label" for="inlineCheckbox2">Feijão</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="opcoes" value="Batata Doce">
+                        <label class="form-check-label" for="inlineCheckbox3">Batata Doce</label>
+                    </div>
+                </div>
+                <div class="options-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="opcoes" value="Pão">
+                        <label class="form-check-label" for="inlineCheckbox4">Pão</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="opcoes" value="Queijo">
+                        <label class="form-check-label" for="inlineCheckbox5">Queijo</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox6" name="opcoes" value="Carne">
+                        <label class="form-check-label" for="inlineCheckbox6">Carne</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 text-center">
+                <button type="submit" class="btn" name="enviar">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <!-- Rodapé aqui se desejar -->
+        © 2023 Clínica B12
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
