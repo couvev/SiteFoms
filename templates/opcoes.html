@@ -2,101 +2,21 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B12</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="{{ url_for('static', filename='favi.ico') }}" type="image/x-icon">
-    <title>Formulário com Menu Múltiplo</title>
+    <link rel="stylesheet" href="static\css\styles2.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <style>
         body {
-            background-color: #121212;
-            color: #fff;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        h1 {
-            color: #fff;
-            text-align: center;
-            font-size: 34px; /* Altere o tamanho conforme necessário */
-            margin-bottom: 25px;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 30px;
-        }
-
-        label {
-            color: #61dafb;
-        }
-
-        input,
-        .btn {
-            background-color: #61dafb;
-            color: #fff;
-        }
-
-        input::placeholder {
-            color: #ccc;
-        }
-
-        .form-check-label {
-            color: #61dafb;
-        }
-
-        .dropdown-toggle {
-            background-color: #61dafb;
-            color: #fff;
-        }
-
-        .dropdown-item {
-            background-color: #121212;
-            color: #fff;
-        }
-
-        .dropdown-item:hover {
-            background-color: #333;
-        }
-
-        footer {
-            padding: 20px;
-            text-align: center;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Estilo personalizado para alinhar opções verticalmente e adicionar espaçamento */
-        .options-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 8px; /* Adicione o espaçamento desejado */
-        }
-
-        .options-group {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 10px; /* Adicione o espaçamento desejado */
-        }
-
-        /* Adicionando espaço entre a checkbox e o texto da label */
-        .form-check-label {
-            margin-left: 10px;
-        }
-
-        /* Adicionando espaço abaixo do botão */
-        .mb-3.text-center {
-            margin-top: 20px; /* Ajuste o valor conforme necessário */
+            background-color: #c0c0c0; /* Substitua pela cor desejada */
         }
     </style>
-</head>
+  
+  </head>
 
 <body>
     <header>
@@ -104,50 +24,88 @@
     </header>
 
     <main>
-        <!-- Adicione o atributo 'action' ao seu formulário para indicar a rota a ser chamada -->
-        <form method="POST" action="{{ url_for('opcoes') }}">
-            <!-- Seus campos de nome e idade aqui -->
-            <div class="container d-flex justify-content-center align-items-center">
-                <h1>Selecione as opcoes:</h1>
-            </div>
-            <div class="container d-flex justify-content-center align-items-center">
-                <h2>Cafe da manhã:</h2>
-            </div>
-            <div class="options-container">
-                <!-- Adicione o atributo 'name' aos seus checkboxes para capturar as opções -->
-                <div class="options-group">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="opcoes" value="Arroz">
-                        <label class="form-check-label" for="inlineCheckbox1">Arroz</label>
+        <div class="container d-flex justify-content-center align-items-center">
+            <h1>Selecione as opcoes:</h1>
+        </div>
+        <form method="POST" action="{{ url_for('opcoes') }}" class="styled-form">
+            <div class="fundo-div-form">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <h2>Café da Manhã</h2>
+                </div>
+                <div class="options-container">
+                    <!-- Adicione o atributo 'name' aos seus checkboxes para capturar as opções -->
+                    <div class="options-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="opcoes-cafe" value="Arroz">
+                            <label class="form-check-label" for="inlineCheckbox1">Arroz</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="opcoes-cafe" value="Feijão">
+                            <label class="form-check-label" for="inlineCheckbox2">Feijão</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="opcoes-cafe" value="Batata Doce">
+                            <label class="form-check-label" for="inlineCheckbox3">Batata Doce</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="opcoes" value="Feijão">
-                        <label class="form-check-label" for="inlineCheckbox2">Feijão</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="opcoes" value="Batata Doce">
-                        <label class="form-check-label" for="inlineCheckbox3">Batata Doce</label>
+                    <div class="options-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="opcoes-cafe" value="Pão">
+                            <label class="form-check-label" for="inlineCheckbox4">Pão</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="opcoes-cafe" value="Queijo">
+                            <label class="form-check-label" for="inlineCheckbox5">Queijo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" name="opcoes-cafe" value="Carne">
+                            <label class="form-check-label" for="inlineCheckbox6">Carne</label>
+                        </div>
                     </div>
                 </div>
-                <div class="options-group">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" name="opcoes" value="Pão">
-                        <label class="form-check-label" for="inlineCheckbox4">Pão</label>
+            </div>
+        
+            <div class="fundo-div-form">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <h2>Almoço</h2>
+                </div>
+                <div class="options-container">
+                    <div class="options-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox7" name="opcoes-almoco" value="Arroz">
+                            <label class="form-check-label" for="inlineCheckbox7">Arroz</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox8" name="opcoes-almoco" value="Feijão">
+                            <label class="form-check-label" for="inlineCheckbox8">Feijão</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox9" name="opcoes-almoco" value="Batata Doce">
+                            <label class="form-check-label" for="inlineCheckbox9">Batata Doce</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" name="opcoes" value="Queijo">
-                        <label class="form-check-label" for="inlineCheckbox5">Queijo</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox6" name="opcoes" value="Carne">
-                        <label class="form-check-label" for="inlineCheckbox6">Carne</label>
+                    <div class="options-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox10" name="opcoes-almoco" value="Pão">
+                            <label class="form-check-label" for="inlineCheckbox10">Pão</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox11" name="opcoes-almoco" value="Queijo">
+                            <label class="form-check-label" for="inlineCheckbox11">Queijo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox12" name="opcoes-almoco" value="Carne">
+                            <label class="form-check-label" for="inlineCheckbox12">Carne</label>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="mb-3 text-center">
-                <button type="submit" class="btn" name="enviar">Enviar</button>
+                <button type="submit" class="btn btn-success" name="enviar">Enviar</button>
             </div>
         </form>
+        
+        
     </main>
 
     <footer>

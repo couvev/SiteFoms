@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-def send(nome, idade, manha):
+def send(nome, idade, manha, almoco):
     # Configurações do remetente
     remetente_email = "memeshaha132@gmail.com"
     remetente_senha = "kcqw zzvu fqwa gllh"
@@ -16,7 +16,7 @@ def send(nome, idade, manha):
 
     # Criação da mensagem
     assunto = f"Informações do paciente: {nome}"
-    corpo = f"Nome completo: {nome} \nIdade: {idade} \n\nCafe da manhã: {manha}"
+    corpo = f"Nome completo: {nome} \nIdade: {idade} \n\nCafe da manhã: {manha} \n\nAlmoço: {almoco}"
 
     mensagem = MIMEMultipart()
     mensagem['From'] = remetente_email

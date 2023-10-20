@@ -1,0 +1,58 @@
+/* styles1.css */
+
+body {
+    background-color: #c0c0c0; /* branco */
+    color: #333; /* cor do texto principal */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+}
+
+header {
+    background-color: #63d820; /* azul */
+    color: #ffffff; /* branco */
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.container h1 {
+    color: #000000; /* azul */
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    padding-bottom: 8px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.form-label {
+    color: #000000; /* azul */
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #28a745; /* verde */
+    color: #ffffff; /* branco */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-success:hover {
+    background-color: #218838; /* Tom mais escuro de verde quando hover */
+}
+
+footer {
+    background-color: #007bff; /* azul */
+    color: #ffffff; /* branco */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

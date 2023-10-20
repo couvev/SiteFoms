@@ -1,0 +1,34 @@
+/* styles3.css */
+
+body {
+    background-color: #ffffff; /* branco */
+    color: #333; /* cor do texto principal */
+    text-align: center;
+}
+
+header {
+    background-color: #63d820; /* azul */
+    color: #ffffff; /* branco */
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #007bff; /* azul */
+    color: #ffffff; /* branco */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h1 {
+    color: #000000; /* azul */
+    font-weight: bold;
+}
+
+/* Estilos adicionais conforme necessário */

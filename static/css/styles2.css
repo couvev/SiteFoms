@@ -1,0 +1,73 @@
+/* styles2.css */
+
+body {
+    background-color: #ffffff; /* branco */
+    color: #333; /* cor do texto principal */
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+}
+
+header {
+    background-color: #63d820; /* azul */
+    color: #ffffff; /* branco */
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.options-container {
+    margin: 20px 0;
+}
+
+.options-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+
+footer {
+    background-color: #007bff; /* azul */
+    color: #ffffff; /* branco */
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.styled-form {
+    background-color: #f0f0f0; /* Substitua pela cor desejada */
+    padding: 15px; /* Ajuste o preenchimento conforme necessário */
+    border-radius: 15px;
+}
+
+.fundo-div-form {
+    background-color: #d8d8d8; /* Substitua pela cor desejada */
+    padding: 5px; /* Ajuste o preenchimento conforme necessário */
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.form-check-label {
+    font-weight: bold;
+}
+
+.container h1 {
+    color: #000000; /* preto */
+    text-align: center;
+    font-size: 35px; /* Ajuste o tamanho do texto conforme necessário */
+    padding-bottom: 18px;
+}
+
+.container h2 {
+    color: #000000; /* preto */
+    margin: 10px;
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 30px; /* Ajuste o tamanho do texto conforme necessário */
+}
